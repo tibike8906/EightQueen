@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EightQueen"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="950" Background="Black">
+        Title="EightQueen" Height="800" Width="950" Background="Black">
     <StackPanel Orientation="Horizontal" Margin="5">
         <StackPanel x:Name="spControl">
             <Label Foreground="White" HorizontalAlignment="Center">Első királynő helye</Label>
