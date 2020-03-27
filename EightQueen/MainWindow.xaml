@@ -1,0 +1,164 @@
+﻿<Window x:Class="EightQueen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EightQueen"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="950" Background="Black">
+    <StackPanel Orientation="Horizontal" Margin="5">
+        <StackPanel x:Name="spControl">
+            <Label Foreground="White" HorizontalAlignment="Center">Első királynő helye</Label>
+            <TextBox x:Name="tbFirstQueenPosition" Margin="10 0 10 0" HorizontalAlignment="Center" Width="100"></TextBox>
+            <Button x:Name="btnStart" Margin="0 10 0 0" Click="btnStart_Click" Height="40" Width="100" HorizontalAlignment="Center">Start</Button>
+            <Button x:Name="btnRemoveTable" Margin="0 10 0 0" Click="btnRemoveTable_Click" IsEnabled="False"  Height="40" Width="100" HorizontalAlignment="Center">Tábla ürítése</Button>
+            <Label Foreground="White" HorizontalAlignment="Center">Sebesség</Label>
+            <Label Foreground="White" HorizontalAlignment="Center" Content="{Binding ElementName=sSpeed,Path=Value}"></Label>
+            <Slider x:Name="sSpeed" HorizontalAlignment="Center" Orientation="Vertical" Height="400" Minimum="1" Maximum="1000" IsSnapToTickEnabled="True" TickFrequency="1"></Slider>
+            <Label Foreground="White" HorizontalAlignment="Center">Készítette:</Label>
+            <Label Foreground="White" HorizontalAlignment="Center">Roffa Hajnalka</Label>
+            <Label Foreground="White" HorizontalAlignment="Center">Bacsa Ádám</Label>
+            <Label Foreground="White" HorizontalAlignment="Center">Bogár Tibor</Label>
+        </StackPanel>
+        <StackPanel x:Name="grWaiterZone" Margin="5" Width="80">
+        </StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="90"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="90"/>
+            </Grid.RowDefinitions>
+            <Label Foreground="White" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" FontSize="16">1</Label>
+            <Label Foreground="White" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" FontSize="16">2</Label>
+            <Label Foreground="White" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" FontSize="16">3</Label>
+            <Label Foreground="White" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" FontSize="16">4</Label>
+            <Label Foreground="White" Grid.Row="0" Grid.Column="5" HorizontalAlignment="Center" FontSize="16">5</Label>
+            <Label Foreground="White" Grid.Row="0" Grid.Column="6" HorizontalAlignment="Center" FontSize="16">6</Label>
+            <Label Foreground="White" Grid.Row="0" Grid.Column="7" HorizontalAlignment="Center" FontSize="16">7</Label>
+            <Label Foreground="White" Grid.Row="0" Grid.Column="8" HorizontalAlignment="Center" FontSize="16">8</Label>
+
+            <Label Foreground="White" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" FontSize="16">A</Label>
+            <Label Foreground="White" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" FontSize="16">B</Label>
+            <Label Foreground="White" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" FontSize="16">C</Label>
+            <Label Foreground="White" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" FontSize="16">D</Label>
+            <Label Foreground="White" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" FontSize="16">E</Label>
+            <Label Foreground="White" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" FontSize="16">F</Label>
+            <Label Foreground="White" Grid.Row="7" Grid.Column="0" VerticalAlignment="Center" FontSize="16">G</Label>
+            <Label Foreground="White" Grid.Row="8" Grid.Column="0" VerticalAlignment="Center" FontSize="16">H</Label>
+            
+            <Border x:Name="brChessTable" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="8" Grid.RowSpan="8" BorderThickness="10" BorderBrush="Bisque" Height="660" Width="660">
+                <Grid x:Name="grChessTable" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="8" Grid.RowSpan="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="80"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Grid.Column="0" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="1" Grid.Column="0" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="2" Grid.Column="0" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="3" Grid.Column="0" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="4" Grid.Column="0" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="5" Grid.Column="0" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="6" Grid.Column="0" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="7" Grid.Column="0" Background="Black"></StackPanel>
+
+                    <StackPanel Grid.Row="0" Grid.Column="1" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="1" Grid.Column="1" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="2" Grid.Column="1" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="3" Grid.Column="1" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="4" Grid.Column="1" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="5" Grid.Column="1" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="6" Grid.Column="1" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="7" Grid.Column="1" Background="White"></StackPanel>
+
+                    <StackPanel Grid.Row="0" Grid.Column="2" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="1" Grid.Column="2" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="2" Grid.Column="2" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="3" Grid.Column="2" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="4" Grid.Column="2" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="5" Grid.Column="2" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="6" Grid.Column="2" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="7" Grid.Column="2" Background="Black"></StackPanel>
+
+                    <StackPanel Grid.Row="0" Grid.Column="3" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="1" Grid.Column="3" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="2" Grid.Column="3" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="3" Grid.Column="3" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="4" Grid.Column="3" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="5" Grid.Column="3" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="6" Grid.Column="3" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="7" Grid.Column="3" Background="White"></StackPanel>
+
+                    <StackPanel Grid.Row="0" Grid.Column="4" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="1" Grid.Column="4" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="2" Grid.Column="4" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="3" Grid.Column="4" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="4" Grid.Column="4" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="5" Grid.Column="4" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="6" Grid.Column="4" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="7" Grid.Column="4" Background="Black"></StackPanel>
+
+                    <StackPanel Grid.Row="0" Grid.Column="5" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="1" Grid.Column="5" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="2" Grid.Column="5" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="3" Grid.Column="5" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="4" Grid.Column="5" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="5" Grid.Column="5" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="6" Grid.Column="5" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="7" Grid.Column="5" Background="White"></StackPanel>
+
+                    <StackPanel Grid.Row="0" Grid.Column="6" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="1" Grid.Column="6" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="2" Grid.Column="6" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="3" Grid.Column="6" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="4" Grid.Column="6" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="5" Grid.Column="6" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="6" Grid.Column="6" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="7" Grid.Column="6" Background="Black"></StackPanel>
+
+                    <StackPanel Grid.Row="0" Grid.Column="7" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="1" Grid.Column="7" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="2" Grid.Column="7" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="3" Grid.Column="7" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="4" Grid.Column="7" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="5" Grid.Column="7" Background="White"></StackPanel>
+                    <StackPanel Grid.Row="6" Grid.Column="7" Background="Black"></StackPanel>
+                    <StackPanel Grid.Row="7" Grid.Column="7" Background="White"></StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+        
+    </StackPanel>
+</Window>

@@ -1,0 +1,17 @@
+C:\Users\t.bogar\Downloads\Main-master\Main-master\EightQueen\EightQueen\bin\Debug\EightQueen.exe.config
+C:\Users\t.bogar\Downloads\Main-master\Main-master\EightQueen\EightQueen\bin\Debug\EightQueen.exe
+C:\Users\t.bogar\Downloads\Main-master\Main-master\EightQueen\EightQueen\bin\Debug\EightQueen.pdb
+C:\Users\t.bogar\Downloads\Main-master\Main-master\EightQueen\EightQueen\obj\Debug\MainWindow.g.cs
+C:\Users\t.bogar\Downloads\Main-master\Main-master\EightQueen\EightQueen\obj\Debug\App.g.cs
+C:\Users\t.bogar\Downloads\Main-master\Main-master\EightQueen\EightQueen\obj\Debug\EightQueen_Content.g.cs
+C:\Users\t.bogar\Downloads\Main-master\Main-master\EightQueen\EightQueen\obj\Debug\EightQueen_MarkupCompile.cache
+C:\Users\t.bogar\Downloads\Main-master\Main-master\EightQueen\EightQueen\obj\Debug\EightQueen_MarkupCompile.lref
+C:\Users\t.bogar\Downloads\Main-master\Main-master\EightQueen\EightQueen\obj\Debug\MainWindow.baml
+C:\Users\t.bogar\Downloads\Main-master\Main-master\EightQueen\EightQueen\obj\Debug\EightQueen.g.resources
+C:\Users\t.bogar\Downloads\Main-master\Main-master\EightQueen\EightQueen\obj\Debug\EightQueen.Properties.Resources.resources
+C:\Users\t.bogar\Downloads\Main-master\Main-master\EightQueen\EightQueen\obj\Debug\EightQueen.csproj.GenerateResource.cache
+C:\Users\t.bogar\Downloads\Main-master\Main-master\EightQueen\EightQueen\obj\Debug\EightQueen.exe
+C:\Users\t.bogar\Downloads\Main-master\Main-master\EightQueen\EightQueen\obj\Debug\EightQueen.pdb
+C:\Users\t.bogar\Downloads\Main-master\Main-master\EightQueen\EightQueen\bin\Debug\q2.png
+C:\Users\t.bogar\Downloads\Main-master\Main-master\EightQueen\EightQueen\bin\Debug\q1.png
+C:\Users\t.bogar\Downloads\Main-master\Main-master\EightQueen\EightQueen\obj\Debug\EightQueen.csprojAssemblyReference.cache
